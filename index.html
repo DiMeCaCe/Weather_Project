@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-6">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-6">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1><img class=weather-icon src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-3">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="c°"><a href="#" onclick="convertToCelsius();" id="convertToCelsius"> °C </a> | <a href="#" id="convertToFahrenheit"> °F </a></span
+									></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+              <li>Precipitation: <span id="precipitation"></span> %</li>
+            </ul></br>
+         	<div class="btn-group" role="group" aria-label="For weather">
+		<button type="button" class="btn-primary">Temperature</button>
+		<button type="button" class="btn-primary">Precipitation</button>
+		<button type="button" class="btn-primary">Wind</button>
+	</div><br><br>
+	 <div><img class="wave" src="weather.jpg" alt="temperature wave"></div>
+	 <h5>
+	 <span class="daysBox">
+	<div class="days">
+		<div class="board-group">
+			<div class="first-board">
+				<div class="board">
+					<div class="board-body">
+						<h5 class="board-title">Mon</h5>
+						
+						<div class="emoji">🌤</div>
+						<div class="temp">H:18° L:11°</div>
+					</div>
+				</div>
+			</div>
+			<div class="days">
+				<div class="board">
+					<div class="board-body">
+						<h5 class="board-title">Tue</h5>
+					
+						<div class="emoji">🌤</div>
+						<div class="temp">H:17° L:12°</div>
+					</div>
+				</div>
+			</div>
+			<div class="days">
+				<div class="board">
+					<div class="board-body">
+						<h5 class="board-title">Wed</h5>
+
+						<div class="emoji">🌤</div>
+						<div class="temp">H:19° L:9°</div>
+					</div>
+				</div>
+			</div>
+			<div class="days">
+				<div class="board">
+					<div class="board-body">
+						<h5 class="board-title">Thu</h5>
+
+						<div class="emoji">🌤</div>
+						<div class="temp">H:19° L:11°</div>
+					</div>
+				</div>
+			</div>
+			<div class="days">
+				<div class="board">
+					<div class="board-body">
+						<h5 class="board-title">Fri</h5>
+
+						<div class="emoji">🌤</div>
+            <div class="temp">H:17° L:11°</div>
+          
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</h5>
+<script src="script.js"></script>
+  </body>
+  <footer>
+    <small>
+    Code by Diana Cabral <a href="https://github.com/DiMeCaCe/SheCodes02a.git">Github link</a>
+    </small>
+  </footer>
+</html>
